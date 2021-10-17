@@ -19,9 +19,11 @@ func TestPalindrome(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		got := IsPalindrome(test.input)
-		if got != test.want {
-			t.Errorf("%s: For string \"%q\": got %v, want %v", test.name, test.input, got, test.want)
-		}
+		t.Run(test.name, func(t *testing.T) {
+			got := IsPalindrome(test.input)
+			if got != test.want {
+				t.Errorf("For string %q: got %v, want %v", test.input, got, test.want)
+			}
+		})
 	}
 }
