@@ -2,7 +2,7 @@ package kata
 
 import "testing"
 
-func TestFizzBuzz(t *testing.T) {
+func TestSumIntegers(t *testing.T) {
 
 	type test struct {
 		input string
